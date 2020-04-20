@@ -21,13 +21,20 @@ public class ReadFile {
      * @throws IOException
      */
     private static String fileInputStream(String path) throws IOException {
-        FileInputStream fileInputStream = new FileInputStream(new File(path));
-        InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
-        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-        String line = "";
-        while (bufferedReader.readLine() != null){
-            line += bufferedReader.readLine();
+        FileInputStream fileInputStream = null;
+        try {
+            fileInputStream = new FileInputStream(new File(path));
+            InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            String line = "";
+            while (bufferedReader.readLine() != null){
+                line += bufferedReader.readLine();
+            }
+            return line;
+        }finally {
+            fileInputStream.close();
         }
-        return line;
+
+
     }
 }

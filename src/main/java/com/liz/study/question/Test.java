@@ -1,44 +1,37 @@
 package com.liz.study.question;
 
-import java.util.ArrayList;
-
 /**
  * @author liz
  * @Description:
  * @date: 2020/4/16 14:21
  */
-public class Test<T> {
+public class Test{
 
-    private Test<T> a;
-    private T b;
+//    public static void main(String[] args) {
+//        List<String> userNames = new ArrayList<String>() {{
+//            add("Hollis");
+//            add("hollis");
+//            add("HollisChuang");
+//            add("H");
+//        }};
+//
+//        for (String userName : userNames) {
+//            if (userName.equals("Hollis")) {
+//                userNames.remove(userName);
+//            }
+//        }
+//
+//        System.out.println(userNames);
+//
+//    }
 
     public static void main(String[] args) {
-        Test test = new Test<>();
-        test.setB(new ArrayList<>());
-        Object o = test.getB();
-        System.out.println(o.getClass());
+        Integer a = 1000;
+        Integer b = 1000;
+        Integer c = 100;
+        Integer d = 100;
+        System.out.println("a == b is " + (a == b));
+        System.out.println(("c == d is " + (c == d)));
     }
 
-    public Test(){}
-
-    public Test(Test<T> a, T b) {
-        this.a = a;
-        this.b = b;
-    }
-
-    public Test<T> getA() {
-        return a;
-    }
-
-    public void setA(Test<T> a) {
-        this.a = a;
-    }
-
-    public T getB() {
-        return b;
-    }
-
-    public void setB(T b) {
-        this.b = b;
-    }
 }
