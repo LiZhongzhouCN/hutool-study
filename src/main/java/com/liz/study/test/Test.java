@@ -1,6 +1,8 @@
 package com.liz.study.test;
 
 
+import com.liz.study.clone.Clone;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -12,7 +14,10 @@ import java.util.Date;
  */
 public class Test {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Clone.Cat cat = new Clone.Cat();
+        Clone.Cat cat1 = cat.clone();
+        System.out.println(cat == cat1);
 
     }
 
@@ -23,6 +28,5 @@ public class Test {
         long timeTime = dateTime.getTime();
         System.out.println(timeTime);
     }
-
-
 }
+
