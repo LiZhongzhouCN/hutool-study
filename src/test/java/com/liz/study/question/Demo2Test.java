@@ -16,9 +16,7 @@ public class Demo2Test {
 
     @Test
     public void demo1() {
-
         Scanner scanner = new Scanner(System.in);
-
         while (scanner.hasNext()) {
             int n = scanner.nextInt();
             int[] intArr = new int[n];
