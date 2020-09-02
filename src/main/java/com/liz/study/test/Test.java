@@ -1,8 +1,6 @@
 package com.liz.study.test;
 
 
-import com.liz.study.clone.Clone;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,19 +12,18 @@ import java.util.Date;
  */
 public class Test {
 
-    public static void main(String[] args) throws CloneNotSupportedException {
-        Clone.Cat cat = new Clone.Cat();
-        Clone.Cat cat1 = cat.clone();
-        System.out.println(cat == cat1);
+    public static void main(String[] args) throws ParseException {
 
+        dateFormatTest();
     }
 
-    public void dateFormatTest() throws ParseException {
+    public static void dateFormatTest() throws ParseException {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
-        String time = "2020/4/5 14:56:46.748";
+        String time = "2020/3/10 10:30:42.744";
         Date dateTime = simpleDateFormat.parse(time);
         long timeTime = dateTime.getTime();
         System.out.println(timeTime);
     }
+
 }
 
